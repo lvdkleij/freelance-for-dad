@@ -1,0 +1,101 @@
+---
+
+---
+
+<article class="outer-container">
+    <div class="inner-container">
+        <div class="item--1">
+            <h1 class="pl-4">Lorem ipsum dolor sit amet qui provident velit</h1>
+            <p class="pl-4 pr-12">
+                Sed dolorum possimus sed illo consectetur At asperiores
+                consequatur qui officiis architecto ut cumque voluptatibus. Et
+                mollitia facere eum dolores enim qui provident velit
+            </p>
+            <div class="pl-4 flex gap-4">
+                <button class="px-6 py-2 contact rounded">Contact mij</button>
+                <button class="px-6 py-2 services rounded">Diensten</button>
+            </div>
+        </div>
+        <div class="item--2"></div>
+    </div>
+</article>
+
+<style>
+    .outer-container {
+        container: outerContainer / inline-size;
+        max-width: var(--outer-container-max-width);
+        margin: auto;
+    }
+
+    .inner-container {
+        max-width: var(--inner-container-max-width);
+        padding-top: 12rem;
+        padding-bottom: clamp(6rem, 18vw, 8rem);
+        overflow: hidden;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .item--1 {
+        flex: 1;
+        padding: 0 1rem;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        line-height: 1.2;
+        position: relative;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.625;
+    }
+
+    .item--2 {
+        flex: 1;
+        height: 40rem;
+        background-color: rgba(255, 0, 0, 0.15);
+    }
+
+    @container outerContainer (width < 40rem) {
+        .item--1 {
+            min-width: 100%;
+            padding: 0;
+        }
+
+        .item--2 {
+            min-width: 100%;
+        }
+
+        h1 {
+            width: 100%;
+            padding: 0 1rem;
+            font-size: clamp(2.5rem, 10vw, 3rem);
+        }
+
+        p {
+            padding: 0 1rem;
+        }
+
+        .inner-container {
+            padding-top: 12rem;
+            padding-bottom: 8rem;
+        }
+    }
+
+    .contact {
+        border: 2px solid rgba(198, 198, 198, 0.298);
+    }
+
+    .services {
+        background-color: #046aff;
+        color: white;
+    }
+</style>

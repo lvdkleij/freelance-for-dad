@@ -1,0 +1,96 @@
+---
+const titles = ['Jaren ervaring', 'Persoonlijke aanpak', 'Betrouwbaar']
+---
+
+<div class="outer-container">
+    <div class="inner-container">
+        <h1>Waarom kies je voor mij</h1>
+
+        <div class="ff">
+            {
+                titles.map((title) => (
+                    <div class="item">
+                        <div>
+                            <div class="dd" />
+                        </div>
+                        <h2>{title}</h2>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Est nihil, iure fugiat aut aliquid mollitia
+                            sequi perferendis.
+                        </p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .outer-container {
+        container: outerContainer / inline-size;
+        max-width: var(--outer-container-max-width);
+        background-color: #f8f8f8;
+        padding-top: 6rem;
+        padding-bottom: 8rem;
+    }
+
+    .inner-container {
+        max-width: var(--inner-container-max-width);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+        gap: 4rem;
+    }
+
+    .ff {
+        display: flex;
+        justify-content: center;
+        column-gap: clamp(1rem, 2vw, 2rem);
+        row-gap: 2rem;
+        width: 100%;
+    }
+
+    .ff > * {
+        flex: 1;
+        border: 0.25rem solid rgba(226, 226, 226, 0.467);
+        border-radius: 0.6125rem;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 3.5rem 0.5rem;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    p {
+        text-align: center;
+        color: rgba(0, 0, 0, 0.463);
+    }
+
+    .dd {
+        width: 5rem;
+        height: 5rem;
+        background-color: red;
+        border-radius: 0.6125rem;
+    }
+
+    @container outerContainer (width < 46rem) {
+        .ff {
+            flex-direction: column;
+        }
+    }
+</style>
