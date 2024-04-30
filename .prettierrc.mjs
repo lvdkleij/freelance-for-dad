@@ -1,4 +1,4 @@
-const config = {
+export default {
     trailingComma: 'es5',
     tabWidth: 4,
     semi: false,
@@ -13,5 +13,3 @@ const config = {
         },
     ],
 }
-
-export default config

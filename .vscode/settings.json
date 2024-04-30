@@ -1,0 +1,11 @@
+{
+    "stylelint.validate": ["astro"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll": "explicit"
+    },
+    "eslint.validate": ["javascript", "typescript"],
+    "eslint.probe": ["javascript", "typescript"]
+}
