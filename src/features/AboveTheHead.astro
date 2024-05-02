@@ -1,22 +1,22 @@
 ---
-
+import Button1 from '../components/buttons/Button1.astro'
 ---
 
 <article class="outer-container">
     <div class="inner-container">
         <div class="item--1">
-            <h1 class="pl-4">Lorem ipsum dolor sit amet qui provident velit</h1>
-            <p class="pl-4 pr-12">
+            <h1 class="pr-14">
+                Lorem Ipsum Dolor and Amet Qui Provident Velit
+            </h1>
+            <p class="pr-10">
                 Sed dolorum possimus sed illo consectetur At asperiores
-                consequatur qui officiis architecto ut cumque voluptatibus. Et
-                mollitia facere eum dolores enim qui provident velit
+                consequatur qui officiis architecto ut cumque voluptatibus.
             </p>
-            <div class="pl-4 flex gap-4">
-                <button class="px-6 py-2 contact rounded">Contact mij</button>
-                <button class="px-6 py-2 services rounded">Diensten</button>
+            <div>
+                <Button1>Neem contact op met mij</Button1>
             </div>
         </div>
-        <div class="item--2"></div>
+        <div class="item--2"><div class="ml-14 picture"></div></div>
     </div>
 </article>
 
@@ -29,7 +29,7 @@
 
     .inner-container {
         max-width: var(--inner-container-max-width);
-        padding-top: 12rem;
+        padding-top: 10rem;
         padding-bottom: clamp(6rem, 18vw, 8rem);
         overflow: hidden;
         margin: auto;
@@ -43,24 +43,37 @@
         justify-content: center;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.75rem;
         align-items: start;
+        overflow: visible;
+    }
+
+    .item--1 > * {
+        @apply pl-4;
     }
 
     h1 {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
-        line-height: 1.2;
+        font-size: clamp(2rem, 5vw, 2.5rem);
+        font-weight: 500;
+        line-height: 1.3;
         position: relative;
+        color: var(--title-color);
     }
 
     p {
         font-size: 1.125rem;
         line-height: 1.625;
+        font-weight: 300;
+        color: var(--text-color);
     }
 
     .item--2 {
         flex: 1;
-        height: 40rem;
+    }
+
+    .picture {
+        height: 100%;
+        width: 100%;
         background-color: rgba(255, 0, 0, 0.15);
     }
 
@@ -72,6 +85,7 @@
 
         .item--2 {
             min-width: 100%;
+            padding: 0 1rem;
         }
 
         h1 {

@@ -1,0 +1,62 @@
+---
+const titles = ['Jaren ervaring', 'Persoonlijke aanpak', 'Betrouwbaar']
+---
+
+<div class="outer-container">
+    <div class="inner-container px-4">
+        <div class="wrapper flex gap-9 justify-between c-border-y py-7">
+            {
+                titles.map((title) => (
+                    <div class="flex flex-col gap-2 item">
+                        <h2 class="text-center">{title}</h2>
+                        <p>some text asf asfsaf fsafsafasf</p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .outer-container {
+        container: outerContainer / inline-size;
+        max-width: var(--outer-container-max-width);
+        margin: auto;
+    }
+
+    .inner-container {
+        max-width: var(--inner-container-max-width);
+        margin: auto;
+    }
+
+    .wrapper {
+        max-width: 56rem;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--title-color);
+    }
+
+    .c-border-y {
+        border-bottom: 0.125rem solid rgba(0, 0, 0, 0.141);
+        border-top: 0.125rem solid rgba(0, 0, 0, 0.141);
+    }
+
+    .item {
+        max-width: 20ch;
+    }
+
+    p {
+        text-align: center;
+        color: var(--text-color);
+    }
+
+    @container outerContainer (width < 40rem) {
+        .inner-container {
+            display: none;
+        }
+    }
+</style>

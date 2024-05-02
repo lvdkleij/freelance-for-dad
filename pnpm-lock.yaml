@@ -13,6 +13,12 @@ importers:
             '@astrojs/tailwind':
                 specifier: ^5.1.0
                 version: 5.1.0(astro@4.7.0(@types/node@20.12.7)(sugarss@1.0.1)(typescript@5.4.5))(tailwindcss@3.4.3)
+            '@fontsource/poppins':
+                specifier: ^5.0.14
+                version: 5.0.14
+            '@vercel/speed-insights':
+                specifier: ^1.0.10
+                version: 1.0.10
             astro:
                 specifier: ^4.7.0
                 version: 4.7.0(@types/node@20.12.7)(sugarss@1.0.1)(typescript@5.4.5)
@@ -648,6 +654,12 @@ packages:
                 integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==,
             }
         engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
+
+    '@fontsource/poppins@5.0.14':
+        resolution:
+            {
+                integrity: sha512-nmM1zpPo3Uh4JcGAVSQuWaZNYh2FbbwWhZ5t6hRaynmJaNTBW85d3nEh9zMmzI0HX7X5xqQVdRHeDatKpOGsnA==,
+            }
 
     '@humanwhocodes/config-array@0.11.14':
         resolution:
@@ -1360,6 +1372,32 @@ packages:
             {
                 integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==,
             }
+
+    '@vercel/speed-insights@1.0.10':
+        resolution:
+            {
+                integrity: sha512-4uzdKB0RW6Ff2FkzshzjZ+RlJfLPxgm/00i0XXgxfMPhwnnsk92YgtqsxT9OcPLdJUyVU1DqFlSWWjIQMPkh0g==,
+            }
+        peerDependencies:
+            '@sveltejs/kit': ^1 || ^2
+            next: '>= 13'
+            react: ^18 || ^19
+            svelte: ^4
+            vue: ^3
+            vue-router: ^4
+        peerDependenciesMeta:
+            '@sveltejs/kit':
+                optional: true
+            next:
+                optional: true
+            react:
+                optional: true
+            svelte:
+                optional: true
+            vue:
+                optional: true
+            vue-router:
+                optional: true
 
     '@volar/kit@2.1.6':
         resolution:
@@ -7947,6 +7985,8 @@ snapshots:
 
     '@eslint/js@8.57.0': {}
 
+    '@fontsource/poppins@5.0.14': {}
+
     '@humanwhocodes/config-array@0.11.14':
         dependencies:
             '@humanwhocodes/object-schema': 2.0.3
@@ -8277,6 +8317,8 @@ snapshots:
             eslint-visitor-keys: 3.4.3
 
     '@ungap/structured-clone@1.2.0': {}
+
+    '@vercel/speed-insights@1.0.10': {}
 
     '@volar/kit@2.1.6(typescript@5.4.5)':
         dependencies:

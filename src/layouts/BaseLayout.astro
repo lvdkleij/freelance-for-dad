@@ -1,5 +1,14 @@
 ---
-
+import '@fontsource/poppins/100.css'
+import '@fontsource/poppins/200.css'
+import '@fontsource/poppins/300.css'
+import '@fontsource/poppins/400.css'
+import '@fontsource/poppins/500.css'
+import '@fontsource/poppins/600.css'
+import '@fontsource/poppins/700.css'
+import '@fontsource/poppins/800.css'
+import '@fontsource/poppins/900.css'
+import SpeedInsights from '@vercel/speed-insights/astro'
 ---
 
 <!doctype html>
@@ -13,6 +22,7 @@
     </head>
     <body>
         <slot />
+        <SpeedInsights />
     </body>
 
     <style>
@@ -20,9 +30,16 @@
         @tailwind components;
         @tailwind utilities;
 
+        html {
+            font-family: 'Poppins';
+        }
+
         :root {
             --outer-container-max-width: 120rem;
             --inner-container-max-width: 80rem;
+
+            --title-color: #333333;
+            --text-color: #888888;
         }
     </style>
 </html>
